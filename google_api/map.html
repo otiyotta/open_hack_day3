@@ -9,19 +9,26 @@
       </style>
 
       <script type="text/javascript"
-        src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDEab5TSTA89nP9CMs8TezaMsEtK76oZ5A&sensor=TRUE">
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDEab5TSTA89nP9CMs8TezaMsEtK76oZ5A&sensor=TRUE">
       </script>
 
-      <script type="text/javascript">
-        function initialize() {
-        var mapOptions = {
-          center: new google.maps.LatLng(-34.397, 150.644),
-          zoom: 8,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
+      <script type="text/javascript", src="js.">
+      function initialize() {
+          var mapOptions = {
+center: new google.maps.LatLng(35.685867,139.760578),
+        zoom: 8,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
           };
           var map = new google.maps.Map(document.getElementById("map_canvas"),
-              mapOptions);
-        }
+                  mapOptions);
+          var myLatlng = new google.maps.LatLng(35.685867,139.760578);
+          var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title:"Hello 大手門!"
+          });   
+
+      }
       </script>
     </head>
     <body onload="initialize()">
